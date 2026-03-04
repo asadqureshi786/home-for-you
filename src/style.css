@@ -40,7 +40,7 @@ html,body{
 }
 
 .container{
-  @apply mx-auto xl:px-0 px-6 xl:max-w-[1250px] max-w-full
+  @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[93%]  2xl:max-w-[1450px]556 4xl:max-w-[1450px]    
 }
 
 nav ul li a{

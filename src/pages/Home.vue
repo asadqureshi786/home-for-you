@@ -26,3 +26,7 @@
     </div>
     
 </template>
+
+<script>
+import Admission from '../components/Admission.vue';
+</script>
