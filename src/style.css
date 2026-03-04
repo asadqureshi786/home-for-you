@@ -1,0 +1,56 @@
+
+/* Monsteret */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Oswald */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Sans */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+
+    /* fonts */
+    --font-Roboto : "Roboto", sans-serif;;
+    --font-Mons: "Montserrat", system-ui, sans-serif;
+    --font-oswald: "Oswald", sans-serif;
+    --font-Sans: "Open Sans", sans-serif;
+
+
+     /* colors */
+     --color-primary: #E7C873;
+     --color-darkText: #1A1A1A;
+
+
+    /* Responsive */
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1536px;
+    --breakpoint-4xl: 1920px;
+}
+html,body{
+  @apply font-Roboto 
+}
+
+.container{
+  @apply mx-auto xl:px-0 px-6 xl:max-w-[1250px] max-w-full
+}
+
+nav ul li a{
+  @apply transition-all font-normal hover:text-primary
+}
+
+
+/* Header CSS Start */
+header ul li .item{
+    @apply hover:text-primary transition-all
+}
+/* Header CSS End */
+
