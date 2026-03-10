@@ -1,6 +1,6 @@
 <template>
     <header class="absolute top-3 w-full py-3 z-2" >
-        <div class="container">
+        <div class="tw-container">
             <div class="grid grid-cols-12" >
             <a class="col-span-4" href="#" >
                 <img src="/img/logo.png" class="w-auto h-9"  />
