@@ -24,6 +24,7 @@
 
      /* colors */
      --color-primary: #E7C873;
+     --color-secondary: #bfa86b;
      --color-darkText: #1A1A1A;
 
 
@@ -42,17 +43,30 @@ html,body{
 h1,h2,h3,h4,h5,h6,p{
   @apply text-darkText
 }
+p{
+  @apply leading-6.5
+}
 
 .tw-container{
   @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[93%]     
 } 
 .container{
-  @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[80%]  2xl:max-w-[1450px]  4xl:max-w-[1450px]    
+  @apply mx-auto xl:px-3 px-7 max-w-full xl:max-w-[85%]  2xl:max-w-[1450px]  4xl:max-w-[1450px]    
+}
+
+/* Button Style */
+.btn{
+  @apply w-fit rounded-full font-medium
+}
+.btn-primary{
+  @apply bg-primary px-6.5 py-3 text-sm transition-all hover:bg-secondary cursor-pointer
 }
 
 nav ul li a{
   @apply transition-all font-normal hover:text-primary
 }
+
+
 
 
 /* Header CSS Start */
@@ -62,10 +76,29 @@ header ul li .item{
 /* Header CSS End */
 
 .sec-head{
-  @apply text-4xl font-medium 
+  @apply md:text-4xl text-3xl font-medium 
 }
 
 .sec-text{
-  @apply mt-2 
+  @apply mt-2 text-base
 }
 
+/* Carousel Style Start */
+.carousel {
+  --vc-nav-background: rgba(0, 0, 0, 0.3);
+  --vc-nav-color: white;
+  --vc-nav-color-hover: #e5e5e5;
+  --vc-nav-border-radius: 50%;
+  --vc-nav-width: 40px;
+  --vc-nav-height: 40px;
+}
+.carousel {
+  --vc-pgn-background-color: rgb(179, 179, 179);
+  --vc-pgn-active-color: rgb(26, 26, 26);
+  --vc-pgn-border-radius: 100px;
+  --vc-pgn-height: 8px;
+  --vc-pgn-width: 8px;
+}
+.carousel__pagination{
+  @apply -bottom-10! gap-3!
+}
