@@ -13,20 +13,24 @@
 
 @import "tailwindcss";
 
+:root{
+   --primary: #E7C873;
+   --secondary: #bfa86b;
+   --darkText: #1A1A1A;
+}
+
 @theme {
 
     /* fonts */
-    --font-Roboto : "Roboto", sans-serif;;
+    --font-Roboto : "Roboto", sans-serif;
     --font-Mons: "Montserrat", system-ui, sans-serif;
     --font-oswald: "Oswald", sans-serif;
     --font-Sans: "Open Sans", sans-serif;
 
-
-     /* colors */
-     --color-primary: #E7C873;
-     --color-secondary: #bfa86b;
-     --color-darkText: #1A1A1A;
-
+    /* colors */
+    --color-primary: var(--primary);
+    --color-secondary: var(--secondary);
+    --color-darkText: var(--darkText);
 
     /* Responsive */
     --breakpoint-sm: 640px;
@@ -36,6 +40,7 @@
     --breakpoint-2xl: 1536px;
     --breakpoint-4xl: 1920px;
 }
+
 html,body{
   @apply font-Roboto 
 }
@@ -102,3 +107,24 @@ header ul li .item{
 .carousel__pagination{
   @apply -bottom-10! gap-3!
 }
+
+/* Customer Says Style Start */
+.customer-says .second-sec button[type="button"]{
+    --vc-nav-background:transparent;
+    --vc-nav-color: var(--primary);
+    --vc-nav-color-hover: var(--primary);
+    border:0.5px solid var(--primary);
+}
+/* Customer Says Style End */
+
+/* Footer Style Start */
+.footer-web .hd{
+  @apply text-white/40! mb-5
+}
+.footer-web .items{
+  @apply text-white! text-[15px] mb-3! flex font-light transition-all!
+}
+.footer-web .items.hover{
+  @apply  transition-all hover:text-primary!
+}
+/* Footer Style End */

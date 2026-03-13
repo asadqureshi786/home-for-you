@@ -130,6 +130,12 @@
     <!-- Customer Says -->
     <CustomerSays/>
 
+    <!-- Best Properties -->
+    <!-- <BestProperties/>s -->
+
+    <!-- Our Team -->
+     <OurTeam/>
+
   <section class="container pt-20"></section>
 </template>
 
@@ -151,6 +157,9 @@ const carouselConfig = {
 import Properties from "../components/web/Properties.vue";
 import HowItsWork from '../components/web/HowItsWork.vue';
 import CustomerSays from '../components/web/CustomerSays.vue';
+import BestProperties from '../components/web/BestProperties.vue';
+import OurTeam from '../components/web/OurTeam.vue';
+
 
 import { onMounted } from "vue";
 import { ref } from 'vue';

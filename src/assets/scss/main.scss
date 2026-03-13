@@ -1,0 +1,36 @@
+$primary: #E7C873;
+$secondary: #bfa86b;
+$darkText: #1A1A1A;
+
+
+// Customer Says SASS Start
+.customer-says{
+    .second-sec{
+       button[type="button"]{
+        top:250px;
+        --vc-nav-border-radius: 80px;
+        --vc-nav-width: 50px;
+        --vc-nav-height: 30px;
+        .carousel__icon{
+            height: 20px;
+            width: 20px;
+        }
+       }
+       .carousel__next{
+        left: 80px;
+       }
+    }
+}
+
+@media only screen and (max-width : 786px) {
+    .customer-says{
+         button[type="button"]{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+         }
+    }
+}
+
+// Customer Says SASS End
+
