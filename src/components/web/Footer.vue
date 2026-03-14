@@ -9,9 +9,9 @@
                     <li>
                         <span class="text-white text-[15px]">Follow Us:</span>
                     </li>
-                    <li><a class="text-[15px] transition-all hover:text-primary cursor-pointer">Facebook</a></li>
-                    <li><a class="text-[15px] transition-all hover:text-primary cursor-pointer">Instagram</a></li>
-                    <li><a class="text-[15px] transition-all hover:text-primary cursor-pointer">Linkdln</a></li>
+                    <li><a class="text-[15px] transition-all hover:text-white/30 cursor-pointer">Facebook</a></li>
+                    <li><a class="text-[15px] transition-all hover:text-white/30 cursor-pointer">Instagram</a></li>
+                    <li><a class="text-[15px] transition-all hover:text-white/30 cursor-pointer">Linkdln</a></li>
                 </ul>
             </div>
 

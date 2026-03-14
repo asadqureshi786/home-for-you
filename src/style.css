@@ -14,8 +14,8 @@
 @import "tailwindcss";
 
 :root{
-   --primary: #E7C873;
-   --secondary: #bfa86b;
+   --primary: #5A3350;
+   --secondary: #e5f2c9;
    --darkText: #1A1A1A;
 }
 
@@ -125,6 +125,6 @@ header ul li .item{
   @apply text-white! text-[15px] mb-3! flex font-light transition-all!
 }
 .footer-web .items.hover{
-  @apply  transition-all hover:text-primary!
+  @apply  transition-all hover:text-white/30!
 }
 /* Footer Style End */

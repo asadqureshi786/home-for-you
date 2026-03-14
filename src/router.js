@@ -3,7 +3,11 @@ import { createWebHistory, createRouter } from 'vue-router'
 // Layout
 import WebLayout from './layout/WebLayout.vue'
 
+// Web Page
 import Home from './pages/Home.vue'
+
+// Auth
+import Login from './pages/auth/login.vue'
 
 const routes = [
 
@@ -16,6 +20,10 @@ const routes = [
     ]
 
   },
+  {
+    path : '/login',
+    component : Login,
+  }
 ]
 
 const router = createRouter({
