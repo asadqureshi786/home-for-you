@@ -15,7 +15,7 @@
             <!-- <video src="/login-vid.mp4"></video> -->
         </div>
         <div class="lg:col-span-5 md:w-7/12 w-10/12 lg:mx-auto mx-auto w h-full">
-            <div class="4xl:w-7/12 lg:w-8/12  mx-auto h-full flex flex-col justify-center " >
+            <div class="4xl:w-7/12 lg:w-12/12  mx-auto h-full flex flex-col justify-center " >
                 <div class="text-center mb-6">
                     <img src="/img/logo.png" class="bg-black/50 w-auto h-10 mx-auto mb-10"  />
                 <h2 class="font-semibold 4xl:text-5xl text-[34px] " >Wellcome Back</h2>
@@ -76,7 +76,7 @@
                         <a class="  text-right text-primary font-medium text-sm border-b border-primary leading-3" >Forgot Password?</a>
 
                     </div>
-                    <button class="bg-primary text-white w-full text-sm rounded-md py-3 font-semibold shadow-4xl" >Login</button>
+                    <button class="bg-primary hover:bg-secondary transition-all hover:text-darkText border border-primary hover:border-black/10 cursor-pointer text-white w-full text-sm rounded-md py-3 font-semibold shadow-4xl" >Login</button>
                 </form>
             </div>
         </div>
