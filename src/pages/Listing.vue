@@ -5,7 +5,7 @@
                 
                 <!-- Price Section -->
                 <div class=" font-bold text-darkText text-[15px] mb-1" >Type of Property</div>
-                <ul class="flex flex-col">
+                <ul class="flex flex-col gap-1.5 listing-type-checkbox">
                     <li class="" >
                         <label class="flex items-center gap-2 cursor-pointer">
                             <Checkbox v-model="checked" class="" binary />
