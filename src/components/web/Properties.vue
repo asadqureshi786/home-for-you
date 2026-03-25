@@ -4,7 +4,7 @@
             <div :style="`background-image: url(${item.background})`" 
             class="group properties-detail bg-full bg-cover  h-85 w-full rounded-lg px-3 py-3 flex flex-col justify-between" >
                 <div class="top-bar flex gap-2" >
-                     <span class="bg-[#1F4B43] text-white uppercase font-medium text-[13px] px-4 pt-1 pb-1  rounded-full" >For Sale</span>
+                     <span class="bg-[#1F4B43] text-white uppercase font-medium text-[13px] px-4 pt-1 pb-1  rounded-full" >{{ item.type }}</span>
                      <span v-if="item.feature" class="bg-primary text-white uppercase font-medium text-[13px] px-4 pt-1 pb-1  rounded-full" >Featured</span>
                 </div>
                 <div class="bg-white group-hover:bg-slate-300  transition-all w-full rounded-lg px-4 py-3">

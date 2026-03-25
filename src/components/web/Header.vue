@@ -1,5 +1,5 @@
 <template>
-    <header v-if="route == '/' || route == '/home'" :class="['absolute', 'top-3', 'w-full', 'py-3' ,'z-2' , isScrolled && 'scollActive' ]" >
+    <header v-if="isHomePage" :class="['absolute', 'top-3', 'w-full', 'py-3' ,'z-2' , isScrolled && 'scollActive' ]" >
         <div class="tw-container">
             <div class="grid grid-cols-12" >
             <a class="col-span-4" href="#" >
@@ -41,7 +41,7 @@
     </header>
 
 
-    <header v-else :class="['absolute','bg-darkText', 'top-0', 'w-full', 'py-5' ,'z-2' , isScrolled && 'scollActive' ]" >
+    <header v-else :class="['absolute','bg-darkText', 'top-0', 'w-full', 'py-6' ,'z-2' , isScrolled && 'scollActive' ]" >
         <div class="tw-container">
             <div class="grid grid-cols-12" >
             <a class="col-span-4" href="#" >
@@ -85,11 +85,9 @@
 
 <script setup>
 import { useRoute } from 'vue-router';
-const route = useRoute().path;
-console.log(route);
+const route = useRoute();
 
-
-import {ref, onMounted, onUnmounted} from 'vue'
+import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 
 const isScrolled = ref(false)
 const menuOpen = ref(false)
@@ -97,6 +95,10 @@ const menuOpen = ref(false)
 function toggleMenu(){
     menuOpen.value = !menuOpen.value
 }
+
+
+const isHomePage = computed(() => route.path === '/' || route.path === '/home')
+
 
 const handleScroll = ()=>{
     if(scrollY > 100){
