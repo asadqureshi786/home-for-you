@@ -14,8 +14,12 @@
 @import "tailwindcss";
 
 :root{
-   --primary: #5A3350;
-   --secondary: #e5f2c9;
+   /* --primary: #5A3350; */
+   /* --primary: #0353A4; */
+   --primary: #40916c;
+   /* --secondary: #e5f2c9; */
+   /* --secondary: #003559; */
+   --secondary: #2d6a4f;
    --darkText: #1A1A1A;
 }
 
@@ -64,9 +68,11 @@ p{
   @apply w-fit rounded-full font-medium
 }
 .btn-primary{
-  @apply bg-primary px-6.5 py-3 text-sm transition-all hover:bg-secondary cursor-pointer
+  @apply bg-primary text-white px-6.5 py-3 text-sm transition-all hover:bg-secondary cursor-pointer
 }
-
+.bg-transparent{
+  @apply bg-transparent hover:bg-primary transition-all;
+}
 nav ul li a{
   @apply transition-all font-normal hover:text-primary
 }
@@ -78,6 +84,22 @@ nav ul li a{
 header ul li .item{
     @apply hover:text-primary transition-all
 }
+
+@media only screen and (max-width:1024px){
+  header ul:nth-of-type(2){
+    @apply bg-black border-t border-white/50 w-full px-7.5 max-h-0 overflow-hidden top-19 left-1/2 -translate-x-1/2 flex flex-col items-start gap-5 transition-all duration-350 ease-in-out
+  }
+  header ul:nth-of-type(2) li:nth-child(1){
+    @apply pt-5
+  }
+  header ul:nth-of-type(2) li:last-child{
+    @apply pb-5
+  }
+  header ul:nth-of-type(2).showMennu{
+    @apply h-auto overflow-auto transition-all max-h-200
+  }
+}
+
 /* Header CSS End */
 
 .sec-head{
@@ -125,6 +147,11 @@ header ul li .item{
   @apply text-white! text-[15px] mb-3! flex font-light transition-all!
 }
 .footer-web .items.hover{
-  @apply  transition-all hover:text-white/30!
+  @apply  transition-all hover:text-white/50!
 }
 /* Footer Style End */
+
+/* 
+.properties-detail:hover *{
+  color:white!important;
+} */

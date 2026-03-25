@@ -2,12 +2,12 @@
     <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7" >
         <li v-for="item in list" :key="item.title" >
             <div :style="`background-image: url(${item.background})`" 
-            class="group bg-full bg-cover  h-85 w-full rounded-lg px-3 py-3 flex flex-col justify-between" >
+            class="group properties-detail bg-full bg-cover  h-85 w-full rounded-lg px-3 py-3 flex flex-col justify-between" >
                 <div class="top-bar flex gap-2" >
                      <span class="bg-[#1F4B43] text-white uppercase font-medium text-[13px] px-4 pt-1 pb-1  rounded-full" >For Sale</span>
-                     <span v-if="item.feature" class="bg-primary text-darkText uppercase font-medium text-[13px] px-4 pt-1 pb-1  rounded-full" >Featured</span>
+                     <span v-if="item.feature" class="bg-primary text-white uppercase font-medium text-[13px] px-4 pt-1 pb-1  rounded-full" >Featured</span>
                 </div>
-                <div class="bg-white group-hover:bg-primary transition-all w-full rounded-lg px-4 py-3">
+                <div class="bg-white group-hover:bg-slate-300  transition-all w-full rounded-lg px-4 py-3">
                     <p class="text-base font-medium" >{{ item.title }}</p>
                     <div class="flex items-center my-2 gap-1" >
                         <span class="text-darkText  " >                            

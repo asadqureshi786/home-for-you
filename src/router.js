@@ -5,6 +5,7 @@ import WebLayout from './layout/WebLayout.vue'
 
 // Web Page
 import Home from './pages/Home.vue'
+import Listing from './pages/Listing.vue'
 
 // Auth
 import Login from './pages/auth/login.vue'
@@ -17,6 +18,7 @@ const routes = [
     children : [
       { path: '/', component: Home },
       { path: '/home', component: Home },
+      { path: '/Listing', component: Listing },
     ]
 
   },

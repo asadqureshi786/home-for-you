@@ -1,6 +1,8 @@
 <template>
     <Header/>
-    <router-view></router-view>
+    <div class="main-wrapper pt-25 pb-10">
+         <router-view></router-view>
+    </div>
     <Footer/>
 </template>
 

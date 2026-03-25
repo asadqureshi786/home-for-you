@@ -1,10 +1,10 @@
 <template>
     <section class="container pt-40">
-        <div class="grid md:grid-cols-12 gap-15 place-items-center">
-            <div class="col-span-7" >
+        <div class="grid grid-cols-12 lg:gap-15 place-items-center">
+            <div class="lg:col-span-7 col-span-12" >
                  <img src="/img/how-its-work.png" alt="how-its-works" class="w-auto h-auto" />
             </div>
-            <div class="col-span-5" >
+            <div class="lg:col-span-5 col-span-12 " >
                 <h2 class="md:text-left sec-head">
                     How It works?
                     <br />
