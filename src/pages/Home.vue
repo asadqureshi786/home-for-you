@@ -1,7 +1,6 @@
 <template>
     <!-- Banner -->
-    <section
-      class="bg-[url(/img/home-banner-new.jpg)] bg-fixed absolute top-0 left-0 right-0 h-dvh bg-cover "
+    <section class="bg-[url(/img/home-banner-new.jpg)] h-dvh bg-cover" id="home-id" >
     >
       <div class="absolute top-0 left-0 h-full w-full bg-black/50"></div>
       <div
@@ -96,9 +95,9 @@
     </section>
 
     <!-- Feature List -->
-    <section class="container pt-40">
+    <section class="container pt-40" id="listings-id" >
       <h2 class="text-center sec-head">Featured Properties</h2>
-      <Properties :list="proppertieslist" class="mt-15 mb-8" />
+      <Properties xlCol="3" :list="proppertieslist" class="mt-15 mb-8" />
       <button class="flex mx-auto btn btn-primary" >See All Listings</button>
     </section>
 
@@ -134,7 +133,9 @@
     <!-- <BestProperties/>s -->
 
     <!-- Our Team -->
-     <OurTeam/>
+     <div id="member-id">
+       <OurTeam/>
+     </div>
 
   <section class="container pt-20"></section>
 </template>
@@ -170,6 +171,7 @@ import Typed from "typed.js";
 const proppertieslist = ref([
     {
         background : '/img/properties/img1.jpg',
+        type : "Rent",
         feature : true,
         title : 'Luxury Family Home',
         loaction : '1800-1818 79th St',
@@ -181,6 +183,7 @@ const proppertieslist = ref([
     },
     {
         background : '/img/properties/img2.jpg',
+        type : "For Sale",
         feature : false,
         title : 'Skyper Pool Apartment',
         loaction : '1020 Bloomingdale Ave',
@@ -192,6 +195,7 @@ const proppertieslist = ref([
     },
     {
         background : '/img/properties/img3.jpg',
+        type : "For Sale",
         feature : false,
         title : 'North Dillard Street',
         loaction : '4330 Bell Shoals Rd',
@@ -203,6 +207,7 @@ const proppertieslist = ref([
     },
     {
         background : '/img/properties/img4.jpg',
+        type : "For Sale",
         feature : true,
         title : 'Eaton Garth Penthouse',
         loaction : '4330 Bell Shoals Rd',
@@ -214,6 +219,7 @@ const proppertieslist = ref([
     },
     {
         background : '/img/properties/img5.jpg',
+        type : "For Sale",
         feature : true,
         title : 'New Apartment Nice Wiew',
         loaction : '4330 Bell Shoals Rd',
@@ -225,10 +231,11 @@ const proppertieslist = ref([
     },
     {
         background : '/img/properties/img6.jpg',
+        type : "For Sale",
         feature : true,
         title : 'Diamond Manor Apartment',
         loaction : '4330 Bell Shoals Rd',
-        price : '900',
+        price : '100',
         month : true,
         rooms : '4',
         bath : '2',

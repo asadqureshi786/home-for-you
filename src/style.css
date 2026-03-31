@@ -11,6 +11,12 @@
 /* Sans */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Nunito */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+/* Anton */
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 @import "tailwindcss";
 
 :root{
@@ -30,6 +36,8 @@
     --font-Mons: "Montserrat", system-ui, sans-serif;
     --font-oswald: "Oswald", sans-serif;
     --font-Sans: "Open Sans", sans-serif;
+    --font-Nunito: "Nunito", sans-serif;
+    --font-Anton: "Anton", sans-serif;
 
     /* colors */
     --color-primary: var(--primary);

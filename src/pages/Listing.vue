@@ -1,11 +1,11 @@
 <template>
-    <div class="container">
+    <div class="tw-container">
         <div class="grid grid-cols-12">
             <div class="lg:col-span-3 col-span-12">
                 
                 <!-- Price Section -->
                 <div class=" font-bold text-darkText text-[15px] mb-1" >Type of Property</div>
-                <ul class="flex flex-col gap-1.5 listing-type-checkbox">
+                <ul class="flex flex-col  gap-1.5 listing-type-checkbox">
                     <li class="" >
                         <label class="flex items-center gap-2 cursor-pointer">
                             <Checkbox v-model="checked" class="" binary />
@@ -43,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <Properties :list="proppertieslist" class="my-4 lg:col-span-9 col-span-12" />
+            <Properties xlCol="2" :list="proppertieslist" class="my-4 lg:col-span-9 col-span-12" />
         </div>
     </div>
 </template>

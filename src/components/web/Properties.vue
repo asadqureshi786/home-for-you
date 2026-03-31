@@ -1,5 +1,5 @@
 <template>
-    <ul class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-7" >
+    <ul :class="`grid lg:grid-cols-${xlCol} md:grid-cols-2 grid-cols-1 gap-7`" >
         <li v-for="item in list" :key="item.title" >
             <div :style="`background-image: url(${item.background})`" 
             class="group properties-detail bg-full bg-cover  h-85 w-full rounded-lg px-3 py-3 flex flex-col justify-between" >
@@ -9,7 +9,7 @@
                 </div>
                 <div class="bg-white group-hover:bg-slate-300  transition-all w-full rounded-lg px-4 py-3">
                     <p class="text-base font-medium" >{{ item.title }}</p>
-                    <div class="flex items-center my-2 gap-1" >
+                    <div class="flex items-center mt-0 mb-1 gap-1" >
                         <span class="text-darkText  " >                            
                             <svg width="15" height="15" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g clip-path="url(#clip0_2_544)">
@@ -25,7 +25,7 @@
                         <p class="text-sm" >{{item.loaction}}</p>
                     </div>
                     <div class="flex justify-between items-center ">
-                        <span class="text-red-600 font-medium text-base">${{item.price}} <span v-if="item.month" class="font-normal text-xs" >/month</span> </span>
+                        <span class="text-darkText font-light! font-Anton text-lg">${{item.price}} <span v-if="item.month" class="font-normal text-xs" >/month</span> </span>
                         <div class="flex gap-5 items-center">
                             <div class="flex items-center gap-2">
                                 <span>                                
@@ -40,7 +40,7 @@
                                     </defs>
                                     </svg>
                                 </span>
-                                <span class="text-sm" >{{ item.rooms }}</span>
+                                <span class="text-sm text-slate-900" >{{ item.rooms }}</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span>                                
@@ -55,7 +55,7 @@
                                     </defs>
                                     </svg>
                                 </span>
-                                <span class="text-sm" >{{ item.bath }}</span>
+                                <span class="text-sm text-slate-900" >{{ item.bath }}</span>
                             </div>
                             <div class="flex items-center gap-2">
                                 <span>                                
@@ -70,7 +70,7 @@
                                     </defs>
                                     </svg>
                                 </span>
-                                <span class="text-sm" >{{ item.addtions }}</span>
+                                <span class="text-sm text-slate-900" >{{ item.addtions }}</span>
                             </div>
                         </div>
                     </div>
@@ -82,8 +82,9 @@
 
 <script setup >
 
-const {list} = defineProps({
-    list : Array
+const {list , xlCol } = defineProps({
+    list : Array,
+    xlCol : String
 })
 
 </script>

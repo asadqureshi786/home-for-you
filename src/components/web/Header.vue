@@ -1,23 +1,23 @@
 <template>
-    <header v-if="isHomePage" :class="['absolute', 'top-3', 'w-full', 'py-3' ,'z-2' , isScrolled && 'scollActive' ]" >
+    <header v-if="isHomePage" :class="['fixed', 'top-3', 'w-full', 'py-3' ,'z-2' , isScrolled && 'scollActive' ]" >
         <div class="tw-container">
             <div class="grid grid-cols-12" >
             <a class="col-span-4" href="#" >
                 <img src="/img/logo.png" class="w-auto h-9"  />
             </a>
             <ul class="col-span-4 lg:flex hidden items-center gap-10 justify-center text-white text-[15px]" >
-                <li><RouterLink to="/" class="item" >Home</RouterLink></li>
-                <li><RouterLink to="/listing" class="item" >Listing</RouterLink></li>
-                <li><a href="#" class="item" >Member</a></li>
-                <li><a href="#" class="item" >Blog</a></li>
-                <li><a href="#" class="item" >Contact</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
             <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-10 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
-                <li><a href="#" class="item" >Home</a></li>
-                <li><RouterLink to="/listing" class="item" >Listing</RouterLink></li>
-                <li><a href="#" class="item" >Member</a></li>
-                <li><a href="#" class="item" >Blog</a></li>
-                <li><a href="#" class="item" >Contact</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
             <ul class="lg:col-span-4 col-span-8 flex items-center justify-end lg:gap-5 gap-3" >
                 <li class="md:flex hidden items-center gap-3" >
@@ -28,7 +28,7 @@
                     <div class="border border-white  cursor-pointer rounded-full w-fit lg:p-2.5 p-1.5" >
                         <img src="/svg/profile.svg" class="w-4" />
                     </div>
-                    <RouterLink to="/login" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</RouterLink>
+                    <a to="/login" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</a>
                 </li>
                 <li class="lg:hidden block" @click="toggleMenu" >
                     <span class="cursor-pointer transition-all  text-white hover:text-primary text-5xl" >
@@ -48,18 +48,18 @@
                 <img src="/img/logo.png" class="w-auto h-9"  />
             </a>
             <ul class="col-span-4 lg:flex hidden items-center gap-10 justify-center text-white text-[15px]" >
-                <li><RouterLink to="/" class="item" >Home</RouterLink></li>
-                <li><RouterLink to="/listing" class="item" >Listing</RouterLink></li>
-                <li><a href="#" class="item" >Member</a></li>
-                <li><a href="#" class="item" >Blog</a></li>
-                <li><a href="#" class="item" >Contact</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
             <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-10 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
-                <li><a href="#" class="item" >Home</a></li>
-                <li><RouterLink to="/listing" class="item" >Listing</RouterLink></li>
-                <li><a href="#" class="item" >Member</a></li>
-                <li><a href="#" class="item" >Blog</a></li>
-                <li><a href="#" class="item" >Contact</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
+                <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
             <ul class="lg:col-span-4 col-span-8 flex items-center justify-end lg:gap-5 gap-3" >
                 <li class="md:flex hidden items-center gap-3" >
@@ -70,7 +70,7 @@
                     <div class="border border-white  cursor-pointer rounded-full w-fit lg:p-2.5 p-1.5" >
                         <img src="/svg/profile.svg" class="w-4" />
                     </div>
-                    <RouterLink to="/login" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</RouterLink>
+                    <a to="/login" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</a>
                 </li>
                 <li class="lg:hidden block" @click="toggleMenu" >
                     <span class="cursor-pointer transition-all  text-white hover:text-primary text-5xl" >
@@ -107,6 +107,17 @@ const handleScroll = ()=>{
         isScrolled.value = false
     }
 }
+
+// Smoth Scroll
+function scrollIntoSec(id){
+    console.log(id);
+    const element = document.getElementById(id)
+    console.log(element);
+    if(element){
+        element.scrollIntoView({behavior: 'smooth'})
+    }
+}
+
 
 onMounted(()=>{
     window.addEventListener('scroll', handleScroll)
