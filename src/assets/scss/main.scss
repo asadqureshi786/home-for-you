@@ -112,6 +112,14 @@ input[type="range"]::-webkit-slider-thumb:hover {
 
 // Chexkboxes SASS Start
 .p-checkbox{
-    
+    .p-checkbox-box{
+        width: 17px;
+        height: 17px;
+        border-radius: 4px;
+        svg{
+            width: 12px;
+            height: 12px;
+        }
+    }
 }
 // Chexkboxes SASS End

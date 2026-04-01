@@ -6,14 +6,14 @@
                 <img src="/img/logo.png" class="w-auto h-9"  />
             </a>
             <ul class="col-span-4 lg:flex hidden items-center gap-10 justify-center text-white text-[15px]" >
-                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><RouterLink to="/home" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</RouterLink></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
             <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-10 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
-                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Hoasdme</RouterLink></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
@@ -48,14 +48,14 @@
                 <img src="/img/logo.png" class="w-auto h-9"  />
             </a>
             <ul class="col-span-4 lg:flex hidden items-center gap-10 justify-center text-white text-[15px]" >
-                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</RouterLink></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
             <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-10 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
-                <li><a href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</a></li>
+                <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</RouterLink></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>

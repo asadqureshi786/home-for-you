@@ -1,5 +1,5 @@
 <template>
-    <ul :class="`grid lg:grid-cols-${xlCol} md:grid-cols-2 grid-cols-1 gap-7`" >
+    <ul :class="`grid 4xl:grid-cols-3 lg:grid-cols-${xlCol} md:grid-cols-2 grid-cols-1 gap-7`" >
         <li v-for="item in list" :key="item.title" >
             <div :style="`background-image: url(${item.background})`" 
             class="group properties-detail bg-full bg-cover  h-85 w-full rounded-lg px-3 py-3 flex flex-col justify-between" >

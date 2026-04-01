@@ -1,7 +1,8 @@
+
 <template>
     <!-- Banner -->
-    <section class="bg-[url(/img/home-banner-new.jpg)] h-dvh bg-cover" id="home-id" >
-    >
+    <section class="bg-[url(/img/home-banner-new2.jpg)] bg-fixed h-dvh bg-cover" id="home-id" >
+    
       <div class="absolute top-0 left-0 h-full w-full bg-black/50"></div>
       <div
         class="container w-full h-full flex items-center justify-center relative z-1 flex-col text-center"
@@ -98,7 +99,7 @@
     <section class="container pt-40" id="listings-id" >
       <h2 class="text-center sec-head">Featured Properties</h2>
       <Properties xlCol="3" :list="proppertieslist" class="mt-15 mb-8" />
-      <button class="flex mx-auto btn btn-primary" >See All Listings</button>
+      <RouterLink to="/listing" class="flex mx-auto btn btn-primary" >See All Listings</RouterLink>
     </section>
 
     <!-- Find Properties  -->
@@ -286,3 +287,5 @@ onMounted(() => {
   });
 });
 </script>
+
+

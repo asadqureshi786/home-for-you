@@ -1,40 +1,60 @@
 <template>
     <div class="tw-container">
-        <div class="grid grid-cols-12">
-            <div class="lg:col-span-3 col-span-12">
+        <div class="grid grid-cols-12 lg:gap-10">
+            <div class="lg:col-span-3 col-span-12 lg:sticky top-20" >
                 
                 <!-- Price Section -->
-                <div class=" font-bold text-darkText text-[15px] mb-1" >Type of Property</div>
+                <div class=" font-bold text-secondary text-[15px] mb-2" >Type of Property</div>
                 <ul class="flex flex-col  gap-1.5 listing-type-checkbox">
-                    <li class="" >
+                    <li v-for="(value, index) in typesOfProperties" :key="index" class="" >
                         <label class="flex items-center gap-2 cursor-pointer">
                             <Checkbox v-model="checked" class="" binary />
-                        <span class="text-darkText text-sm" >Apartment</span>
-                        </label>
-                    </li>
-                    <li class="" >
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <Checkbox v-model="checked" class="" binary />
-                        <span class="text-darkText text-sm" >Apartment</span>
-                        </label>
-                    </li>
-                    <li class="" >
-                        <label class="flex items-center gap-2 cursor-pointer">
-                            <Checkbox v-model="checked" class="" binary />
-                        <span class="text-darkText text-sm" >Apartment</span>
+                        <span class="text-darkText text-sm" >{{ value }} </span>
                         </label>
                     </li>
                 </ul>
              
              
                 <!-- Price Section -->
-                <div class=" font-bold text-darkText text-[15px] mb-1" >Base Price</div>
+                <div class=" font-bold text-secondary text-[15px] mb-2 mt-5" >Pricing Range</div>
                 <div class="flex flex-col gap-2">
-                    <input type="range" name="" id="" :min="rangeMinPrice" :max="rangeMaxPrice" class="w-40" v-model="rangeValue" >
+                    <input type="range" name="" id="" :min="rangeMinPrice" :max="rangeMaxPrice" class="w-60" v-model="rangeValue" >
                     <div class="font-medium text-slate-700 text-xs" > ${{ formatValue }}</div>
                 </div>
+                <div class="flex gap-5 mt-2 lg:w-60">
+                    <div>
+                    <label for="" class="text-xs text-darkText font-bold" >Min Price</label>
+                    <input type="number" class="w-full border border-slate-300 rounded-lg py-1.5 px-3 mt-1.5 outline-0 text-xs font-medium text-darkText"  >
+                </div>
+                <div>
+                    <label for="" class="text-xs text-darkText font-bold" >Max Price</label>
+                    <input type="number" class="w-full border border-slate-300 rounded-lg py-1.5 px-3 mt-1.5 outline-0 text-xs font-medium text-darkText"  >
+                </div>
+                </div>
+
+                <!-- Rooms & Bathrooms -->
+                <div class=" font-bold text-secondary text-[15px] mb-2 mt-5" >Rooms & Bathrooms</div>
+                <div>
+                    <label for="" class="text-xs text-darkText font-bold mb-1.5 inline-flex" >Rooms</label>
+                    <div class="flex flex-wrap items-center gap-2">
+                    <label v-for="value in allRooms" :key="value" class=" cursor-pointer" >
+                        <input type="checkbox" class="peer hidden" name="" id="">
+                        <div class="peer-checked:bg-primary peer-checked:text-white peer-checked:border-secondary border border-gray-300 text-gray-500 rounded-[3px] h-6 w-7  flex justify-center items-center text-xs" >{{ value }}</div>
+                    </label>
+                    </div>
+                </div>
+                <div>
+                    <label for="" class="mt-3 text-xs text-darkText font-bold mb-1.5 inline-flex" > Bathrooms</label>
+                    <div class="flex flex-wrap items-center gap-2">
+                    <label v-for="value in allBathrooms" :key="value" class=" cursor-pointer" >
+                        <input type="checkbox" class="peer hidden" name="" id="">
+                        <div class="peer-checked:bg-primary peer-checked:text-white peer-checked:border-secondary border border-gray-300 text-gray-500 rounded-[3px] h-6 w-7  flex justify-center items-center text-xs" >{{ value }}</div>
+                    </label>
+                    </div>
+                </div>
+
             
-                <div class="w-60" >
+                <div class="w-60 hidden" >
                     <div class="border border-slate-300 rounded-lg py-1.5 px-3 relative" >
                         <div class="text-slate-500 absolute top-1/2 -translate-y-1/2 left-2">
                             <svg width="24px" height="24px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_15_152)"> <rect width="24" height="24" fill="white"></rect> <circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-linejoin="round"></circle> <path d="M19.6464 20.3536C19.8417 20.5488 20.1583 20.5488 20.3536 20.3536C20.5488 20.1583 20.5488 19.8417 20.3536 19.6464L19.6464 20.3536ZM20.3536 19.6464L15.3536 14.6464L14.6464 15.3536L19.6464 20.3536L20.3536 19.6464Z" fill="currentColor"></path> </g> <defs> <clipPath id="clip0_15_152"> <rect width="24" height="24" fill="white"></rect> </clipPath> </defs> </g></svg>
@@ -131,6 +151,12 @@ const proppertieslist = ref([
         addtions : '400',
     },
 ])
+
+
+// All Filter Thisngs
+const typesOfProperties = ref(['House (Single Family Home)', 'Apartment', 'Condo', 'Townhouse', 'Duplex', 'Loft', 'Studio', 'Villa', 'Cottage', 'Bungalow']);
+const allRooms = ref(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10+']);
+const allBathrooms = ref(['1', '2', '3', '4', '5', '6+']);
 
 const rangeMaxPrice = ref(0);
 const rangeMinPrice = ref(0);
