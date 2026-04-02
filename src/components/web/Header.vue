@@ -28,7 +28,7 @@
                     <div class="border border-white  cursor-pointer rounded-full w-fit lg:p-2.5 p-1.5" >
                         <img src="/svg/profile.svg" class="w-4" />
                     </div>
-                    <a to="/login" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</a>
+                    <button @click.prevent="showModal = true" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</button>
                 </li>
                 <li class="lg:hidden block" @click="toggleMenu" >
                     <span class="cursor-pointer transition-all  text-white hover:text-primary text-5xl" >
@@ -39,8 +39,6 @@
             </div>
         </div>
     </header>
-
-
     <header v-else :class="['absolute','bg-darkText', 'top-0', 'w-full', 'py-6' ,'z-2' , isScrolled && 'scollActive' ]" >
         <div class="tw-container">
             <div class="grid grid-cols-12" >
@@ -70,7 +68,7 @@
                     <div class="border border-white  cursor-pointer rounded-full w-fit lg:p-2.5 p-1.5" >
                         <img src="/svg/profile.svg" class="w-4" />
                     </div>
-                    <a to="/login" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</a>
+                    <button  @click.prevent="showModal = true" class="lg:block hidden border border-white rounded-full w-fit py-2 text-white px-7 text-[13px] transition-all bg-transparent hover:border-white cursor-pointer" >Add Property</button>
                 </li>
                 <li class="lg:hidden block" @click="toggleMenu" >
                     <span class="cursor-pointer transition-all  text-white hover:text-primary text-5xl" >
@@ -81,14 +79,28 @@
             </div>
         </div>
     </header>
+
+
+
+
+    <!-- Add Properties Modal -->
+     <Transition name="fade" >
+       <AddPropertiesModal v-if="showModal" @close="showModal = false" />
+     </Transition>
+
 </template>
 
 <script setup>
+// component
+import AddPropertiesModal from '../web/AddPropertiesModal.vue';
+
 import { useRoute } from 'vue-router';
 const route = useRoute();
 
 import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 
+
+const showModal = ref(true)
 const isScrolled = ref(false)
 const menuOpen = ref(false)
 
@@ -110,13 +122,12 @@ const handleScroll = ()=>{
 
 // Smoth Scroll
 function scrollIntoSec(id){
-    console.log(id);
     const element = document.getElementById(id)
     console.log(element);
     if(element){
         element.scrollIntoView({behavior: 'smooth'})
     }
-}
+} 
 
 
 onMounted(()=>{

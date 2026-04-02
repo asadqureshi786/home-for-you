@@ -27,7 +27,20 @@
    /* --secondary: #003559; */
    --secondary: #2d6a4f;
    --darkText: #1A1A1A;
+   --formmLightCol: #d1d5dc;
 }
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+  animation: bounce-in 0.5s;
+
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 
 @theme {
 
@@ -43,6 +56,7 @@
     --color-primary: var(--primary);
     --color-secondary: var(--secondary);
     --color-darkText: var(--darkText);
+    --color-formmLightCol: var(--formmLightCol);
 
     /* Responsive */
     --breakpoint-sm: 640px;
@@ -54,7 +68,7 @@
 }
 
 html,body{
-  @apply font-Roboto bg-white
+  @apply font-Roboto bg-white text-darkText
 }
 
 h1,h2,h3,h4,h5,h6,p{
@@ -110,6 +124,53 @@ header ul li .item{
 
 /* Header CSS End */
 
+/* Form CSS Start */
+form .form-group .form-control{
+  @apply w-full rounded-lg border border-formmLightCol px-4 py-2 focus:outline-none transition-all text-sm text-[#272727];
+}
+form .form-group{
+  @apply flex flex-col gap-1.5;
+}
+form .form-group label{
+  @apply text-darkText font-medium text-[15px];
+}
+/* Form CSS End */
+
+/* Modal Button Style Start  */
+.modal .modal-header{
+  @apply flex justify-between items-start border-b border-slate-300 px-6 py-4;
+}
+.modal .dialog-content{
+  @apply 4xl:max-h-[600px] lg:max-h-[400px] max-h-[400px] overflow-auto
+}
+
+.modal .heading{
+  @apply font-bold text-lg
+}
+.modal .sub-heading{
+  @apply text-slate-800 text-sm relative bottom-0.5
+}
+
+.modal-btn .btn{
+  @apply px-5 py-2 text-sm w-full rounded-sm cursor-pointer
+}
+.modal-btn .btn-secondary{
+  @apply bg-formmLightCol text-darkText hover:bg-formmLightCol/80 transition-all
+}
+.modal form{
+  @apply  py-5
+}
+.modal form .space-default{
+  @apply px-7
+}
+.modal form .modal-btn {
+  @apply mt-5 px-7 
+}
+.modal hr {
+  @apply border-gray-300
+}
+/* Modal Button Style End */
+
 .sec-head{
   @apply md:text-4xl text-3xl font-medium 
 }
@@ -159,11 +220,5 @@ header ul li .item{
 }
 /* Footer Style End */
 
-/* 
-.properties-detail:hover *{
-  color:white!important;
-} */
 
-/* Listing Page Style Start */
-.listing-type-checkbox{}
-/* Listing Page Style End */
+

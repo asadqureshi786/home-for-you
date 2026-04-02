@@ -130,15 +130,15 @@
     <!-- Customer Says -->
     <CustomerSays/>
 
-    <!-- Best Properties -->
-    <!-- <BestProperties/>s -->
-
     <!-- Our Team -->
      <div id="member-id">
        <OurTeam/>
      </div>
 
-  <section class="container pt-20"></section>
+    <section class="container pt-20"></section>
+
+
+    
 </template>
 
 <script setup>
@@ -163,9 +163,11 @@ import BestProperties from '../components/web/BestProperties.vue';
 import OurTeam from '../components/web/OurTeam.vue';
 
 
+
 import { onMounted } from "vue";
 import { ref } from 'vue';
 import Typed from "typed.js";
+
 
 
 // Properties Lists

@@ -87,4 +87,6 @@ const {list , xlCol } = defineProps({
     xlCol : String
 })
 
+console.log(xlCol);
+
 </script>
