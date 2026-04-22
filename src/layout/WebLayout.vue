@@ -1,6 +1,6 @@
 <template>
     <Header/>
-    <div :class="`main-wrapper ${!isHome ? 'pt-25' : ''} pb-10`">
+    <div :class="`main-wrapper ${!isHome ? 'pt-30' : ''} pb-10`">
          <router-view></router-view>
     </div>
     <Footer/>

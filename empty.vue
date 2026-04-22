@@ -1,30 +1,9 @@
 <template>
-    <div class="modal fixed inset-0 flex w-screen items-center justify-center bg-black/40 backdrop-blur-[6px] z-2">
-        <dialog
-            class="add-properties-modal block lg:w-160 h-fit bg-white shadow-2xl rounded-lg fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-5">
-            <div class="modal-header">
-                <div>
-                    <h2 class="heading">
-                        Add New Property
-                    </h2>
-                    <span class="sub-heading">
-                        Fill in the details for the new property.
-                    </span>
-                </div>
-                <span class="text-gray-800 cursor-pointer relative top-1" @click="$emit('close')" >
-                    <svg width="22px" height="22px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
-                        <g id="SVGRepo_iconCarrier">
-                            <path d="M19 5L4.99998 19M5.00001 5L19 19" stroke="currentColor" stroke-width="1.5"
-                                stroke-linecap="round" stroke-linejoin="round"></path>
-                        </g>
-                    </svg>
-                </span>
-            </div>
-            <form action="">
-                <div class="dialog-content">
-                  <div class="pb-7 grid grid-cols-12 gap-5 space-default">
+    <MediumModal @close="$emit('close')"  >
+        <template #title>Add New Property</template>
+        <template #subtitle>Fill in the details for the new property.</template>
+        <template #form-content>
+            <div class="pb-7 grid grid-cols-12 gap-5 space-default">
                 <div class="lg:col-span-8 col-span-12">
                     <div class="form-group">
                         <label for="">Property Name</label>
@@ -114,14 +93,8 @@
                     </div>
                 </div>
             </div>
-                </div>
-                <div class="flex items-center modal-btn gap-4">
-                    <button  @click.prevent="$emit('close')"  class="btn btn-secondary">Close</button>
-                    <button class="btn btn-primary">Add Property</button>
-                </div>
-            </form>
-        </dialog>
-    </div>
+        </template>
+    </MediumModal>
 </template>
 
 <script setup>

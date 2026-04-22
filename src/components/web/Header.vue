@@ -1,9 +1,9 @@
 <template>
-    <header v-if="isHomePage" :class="['fixed', 'top-3', 'w-full', 'py-3' ,'z-2' , isScrolled && 'scollActive' ]" >
+    <header v-if="isHomePage" :class="['fixed', 'top-3', 'w-full', 'lg:py-3 py-2' ,'z-2' , isScrolled && 'scollActive' ]" >
         <div class="tw-container">
             <div class="grid grid-cols-12" >
-            <a class="col-span-4" href="#" >
-                <img src="/img/logo.png" class="w-auto h-9"  />
+            <a class="lg:col-span-4 col-span-8 flex items-center" href="#" >
+                <img src="/img/logo.png" class="lg:w-50 w-40 main-logo"  />
             </a>
             <ul class="col-span-4 lg:flex hidden items-center gap-10 justify-center text-white text-[15px]" >
                 <li><RouterLink to="/home" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</RouterLink></li>
@@ -12,14 +12,14 @@
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
-            <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-10 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
-                <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Hoasdme</RouterLink></li>
+            <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-5 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
+                <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Hoassadasdsadme</RouterLink></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
-            <ul class="lg:col-span-4 col-span-8 flex items-center justify-end lg:gap-5 gap-3" >
+            <ul class="lg:col-span-4 col-span-4 flex items-center justify-end lg:gap-5 gap-3" >
                 <li class="md:flex hidden items-center gap-3" >
                     <img src="/svg/phone.svg" class="w-4.5" />
                     <div class="text-white text-[15px]" >+68 685 88666</div>
@@ -42,8 +42,8 @@
     <header v-else :class="['absolute','bg-darkText', 'top-0', 'w-full', 'py-6' ,'z-2' , isScrolled && 'scollActive' ]" >
         <div class="tw-container">
             <div class="grid grid-cols-12" >
-            <a class="col-span-4" href="#" >
-                <img src="/img/logo.png" class="w-auto h-9"  />
+            <a class="lg:col-span-4 col-span-8 flex items-center" href="#" >
+               <img src="/img/logo.png" class="lg:w-50 w-40 main-logo"  />
             </a>
             <ul class="col-span-4 lg:flex hidden items-center gap-10 justify-center text-white text-[15px]" >
                 <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</RouterLink></li>
@@ -52,14 +52,14 @@
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
-            <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-10 w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
+            <ul :class="` ${menuOpen && 'showMennu'} col-span-4 lg:hidden lg:py-0  absolute top-[82px]! w-full left-0  items-center gap-10 justify-center text-white text-[15px]`" >
                 <li><RouterLink to="/home" href="#" class="item" @click.prevent="scrollIntoSec('home-id')" >Home</RouterLink></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('listings-id')" >Listing</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('member-id')" >Member</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('blog-id')" >Blog</a></li>
                 <li><a href="#" class="item" @click.prevent="scrollIntoSec('contact-id')" >Contact</a></li>
             </ul>
-            <ul class="lg:col-span-4 col-span-8 flex items-center justify-end lg:gap-5 gap-3" >
+            <ul class="lg:col-span-4 col-span-4 flex items-center justify-end lg:gap-5 gap-3" >
                 <li class="md:flex hidden items-center gap-3" >
                     <img src="/svg/phone.svg" class="w-4.5" />
                     <div class="text-white text-[15px]" >+68 685 88666</div>
@@ -100,7 +100,7 @@ const route = useRoute();
 import {ref, onMounted, onUnmounted, computed, watch} from 'vue'
 
 
-const showModal = ref(true)
+const showModal = ref(false)
 const isScrolled = ref(false)
 const menuOpen = ref(false)
 

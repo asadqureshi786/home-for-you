@@ -1,20 +1,20 @@
 
 <template>
     <!-- Banner -->
-    <section class="bg-[url(/img/home-banner-new2.jpg)] bg-fixed h-dvh bg-cover" id="home-id" >
+    <section ref="box" class="bg-[url(/img/home-banner-new2.jpg)] bg-fixed h-dvh bg-cover" id="home-id" >
     
       <div class="absolute top-0 left-0 h-full w-full bg-black/50"></div>
       <div
         class="container w-full h-full flex items-center justify-center relative z-1 flex-col text-center"
       >
         <div class="lg:max-w-162.5 mx-auto">
-          <button
+          <RouterLink to="/guidance"
             class="text-white border border-white rounded-full px-6 py-2 text-xs font-semibold cursor-pointer bg-transparent  transition-all"
           >
             LET US GUIDE YOUR HOME
-          </button>
-          <h2 class="text-white! text-6xl pt-5 lg:leading-18 font-semibold">
-            Discover a place you'll <br />
+          </RouterLink>
+          <h2 class="text-white! lg:text-6xl text-5xl pt-5 lg:leading-18 font-semibold">
+            Discover a place you'll <br class="hidden lg:block" />
             love to <span id="banner_text"></span>
           </h2>
           <div
@@ -144,6 +144,20 @@
 <script setup>
 import 'vue3-carousel/carousel.css'
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
+import { onMounted } from "vue";
+import { ref } from 'vue';
+import gsap from 'gsap'
+
+
+const box = ref(null)
+// onMounted(() => {
+//   gsap.from(box.value, {
+//        y: 50,
+//     opacity: 0,
+//     duration: 0.8,
+//     stagger: 10
+//   })
+// })
 
 const carouselConfig = {
   itemsToShow:4,
@@ -154,7 +168,6 @@ const carouselConfig = {
   gap: 15,
 }
 
-
 // components
 import Properties from "../components/web/Properties.vue";
 import HowItsWork from '../components/web/HowItsWork.vue';
@@ -162,13 +175,7 @@ import CustomerSays from '../components/web/CustomerSays.vue';
 import BestProperties from '../components/web/BestProperties.vue';
 import OurTeam from '../components/web/OurTeam.vue';
 
-
-
-import { onMounted } from "vue";
-import { ref } from 'vue';
 import Typed from "typed.js";
-
-
 
 // Properties Lists
 const proppertieslist = ref([
@@ -279,6 +286,7 @@ const findingList = ref([
     },
 ])
 
+// Banner Text Animation
 onMounted(() => {
   const typed = new Typed("#banner_text", {
     strings: ["Live", "Be Extant"],

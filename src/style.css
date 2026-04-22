@@ -109,7 +109,7 @@ header ul li .item{
 
 @media only screen and (max-width:1024px){
   header ul:nth-of-type(2){
-    @apply bg-black border-t border-white/50 w-full px-7.5 max-h-0 overflow-hidden top-19 left-1/2 -translate-x-1/2 flex flex-col items-start gap-5 transition-all duration-350 ease-in-out
+    @apply bg-black border-t border-white/50 w-full px-7.5 max-h-0 overflow-hidden top-[63px] left-1/2 -translate-x-1/2 flex flex-col items-start gap-5 transition-all duration-350 ease-in-out
   }
   header ul:nth-of-type(2) li:nth-child(1){
     @apply pt-5

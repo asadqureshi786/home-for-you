@@ -69,10 +69,17 @@ clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
 // Header Animation Start
 .scollActive{
     position: fixed;
-    background-color: rgba(0,0,0,0.85);
+    // background-color: rgba(0,0,0,0.85);
+    background-color: rgba(0,0,0,1);
     top: 0;
-    padding-block: 20px;
+    padding-block: 15px;
     animation: headerSlide 0.4s linear 0s 1 alternate;
+    .main-logo{
+        width: 150px;
+    }   
+    ul:nth-of-type(2){
+        top:64px!important;
+    }
 }
 @keyframes headerSlide {
     from {
